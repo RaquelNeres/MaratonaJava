@@ -6,6 +6,8 @@
 Este repositório contém uma série de exercícios para prática de **algoritmos, lógica de programação, cálculos matemáticos e estruturas condicionais**.  
 A cada exercício, você encontrará a descrição e, em alguns casos, dicas para implementação.
 
+[Lista de exercicios](https://www.dio.me/articles/lista-de-exercicios-para-treinar-logica-de-programacao)
+
 ---
 
 ## 📚 Exercícios

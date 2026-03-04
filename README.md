@@ -24,12 +24,12 @@ Public static void main() -> ponto de entrada (para executar codigo, n sao todos
 ## Tipos primitivos:
 - int 
 - long - muitos int
+- float
 - double - muitos float
-- float 
-- byte
-- short
 - boolean
-- char
+- char - Um caractere
+- byte (−128 a 127)
+- short (−32.768 a 32.767)
 
 ## Objeto: 
 *voce consegue fazer manipulações nele*
@@ -37,6 +37,7 @@ Public static void main() -> ponto de entrada (para executar codigo, n sao todos
 - System
 - Integer
 
+var - nao defini o tipo
 
 # Git
 
