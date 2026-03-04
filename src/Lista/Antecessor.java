@@ -1,4 +1,6 @@
-package Lista// - Leia um número inteiro e imprima seu antecessor e sucessor.
+package Lista;
+
+// - Leia um número inteiro e imprima seu antecessor e sucessor.
 
 import java.util.Scanner;
 

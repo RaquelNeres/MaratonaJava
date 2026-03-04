@@ -1,4 +1,5 @@
-package Lista
+package Lista;
+
 // - Leia um valor e aplique um reajuste de 5%.
 
 import java.util.Scanner;

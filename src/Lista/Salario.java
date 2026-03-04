@@ -1,4 +1,6 @@
-package Lista// - Leia o salário mínimo (R$ 1.293,20) e o salário de um usuário.
+package Lista;
+
+// - Leia o salário mínimo (R$ 1.293,20) e o salário de um usuário.
 // - Calcule quantos salários mínimos ele ganha.
 
 import java.util.Scanner;

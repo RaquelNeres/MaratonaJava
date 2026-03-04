@@ -1,4 +1,4 @@
-// package Lista
+package Lista;
 
 // - Leia os valores de `A`, `B` e `C`.
 // - Imprima a soma de `A` e `B` e verifique se o resultado é menor que `C`.

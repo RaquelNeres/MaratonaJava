@@ -1,4 +1,6 @@
-package Lista// - Leia dois valores lógicos e determine se ambos são VERDADEIRO ou FALSO.
+package Lista;
+
+// - Leia dois valores lógicos e determine se ambos são VERDADEIRO ou FALSO.
 import java.util.Scanner;
 
 public class Booleano {

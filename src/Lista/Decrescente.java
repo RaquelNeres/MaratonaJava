@@ -1,4 +1,6 @@
-package Lista// - Leia três valores inteiros diferentes e imprima-os em ordem decrescente.
+package Lista;
+
+// - Leia três valores inteiros diferentes e imprima-os em ordem decrescente.
 
 import java.util.Scanner;
 

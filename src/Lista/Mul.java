@@ -1,4 +1,6 @@
-package Lista// - Leia dois valores inteiros A e B.
+package Lista;
+
+// - Leia dois valores inteiros A e B.
 // - Se forem iguais, some-os; caso contrário, multiplique-os.
 // - armazene o resultado em C e imprima.
 

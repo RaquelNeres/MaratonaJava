@@ -1,4 +1,6 @@
-package Lista// - Leia peso e altura.
+package Lista;
+
+// - Leia peso e altura.
 // Calcule o IMC: IMC = peso / (altura²)
 // Classifique conforme a tabela:
 // IMC	Condição
