@@ -1,6 +1,4 @@
-# Anotações Aula
-
-## Pre-POO
+# Pre-POO
 <details>
 <summary>Basico</summary>
 
@@ -35,4 +33,4 @@ pesquise "array java" no google
 
 [Explicação aprofundada](https://www.freecodecamp.org/portuguese/news/metodos-de-arrays-em-java-como-imprimir-um-array-em-java/)
 
-## Pos-POO
+
