@@ -25,7 +25,7 @@ public static void main(String[] args) {
 
 ## Metodos 
 
-Função dentro da classe
+Função dentro da classe 
 
 <div align="center">
   <img src="./imagem.jpg" width="50%">
@@ -46,6 +46,41 @@ public class Pessoa {
     Pessoa pessoa1 = new Pessoa("João", 30);
     pessoa1.saudacao();
   }
+}
+```
+
+#### Metodo estatico
+
+Métodos estáticos em Java (static) pertencem à classe, 
+não a uma instância (objeto) específica, 
+permitindo chamá-los diretamente pelo nome da classe (Classe.metodo()) sem usar new. 
+
+São ideais para funções utilitárias ou de ajuda que não dependem do estado de um objeto,
+
+```java
+public class MinhaClasse {
+    public static void metodoEstatico() {
+        System.out.println("Método estático chamado.");
+    }
+}
+
+// Chamada
+MinhaClasse.metodoEstatico();
+
+```
+
+#### toString
+```java
+public class Pessoa {
+    private String nome;
+    private int idade;
+
+    // Construtor, getters, setters...
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome='" + nome + '\'' + ", idade=" + idade + '}';
+    }
 }
 ```
 
@@ -202,10 +237,52 @@ public class ExemploTryCatch {
 }
 ```
 
+## Enum
+São tipos especiais que definem conjuntos 
+de constantes imutáveis, aumentando a legibilidade, 
+segurança de tipos e manutenção do código. 
+
+Declarados com enum, 
+representam valores fixos como dias da semana 
+ou estados. Eles são classes especiais que 
+não podem ser instanciadas com new.
+
+```java
+// Exemplo com valores associados
+enum DiasDaSemana {
+    SEGUNDA("Ruim"), SEXTA("Melhor");
+    private String descricao;
+    DiasDaSemana(String descricao) { this.descricao = descricao; }
+    public String getDescricao() { return descricao; }
+}
+```
+
+![img_17.png](./img_17.png)
+
+
+
 ## Conceitos
 
 ### Poliforfismo
 O objeto pode assumir várias formas diferentes
+
+###### Cast e instaceof
+instanceof verifica se um objeto é de um determinado 
+tipo (retorna true/false), 
+enquanto cast converte um objeto de 
+um tipo para outro, geralmente de uma superclasse 
+para subclasse (downcasting). Usar instanceof 
+antes de um cast evita ClassCastException em tempo de execução.
+
+
+```java
+// Exemplo de uso
+Object obj = "Olá Mundo";
+if (obj instanceof String) { // Verificação
+    String s = (String) obj; // Cast seguro
+    System.out.println(s.length());
+}
+```
 
 ### Class Abstract
 Ser como uma classe base para todas as classes 
@@ -258,9 +335,9 @@ varios objetos
 - Conjuntos
 - Mapas
 
-![img_16.png](img_16.png)
+![img_16.png](./img_16.png)
 
-![img_15.png](img_15.png)
+![img_15.png](./img_15.png)
 
 
 
