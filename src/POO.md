@@ -2,7 +2,9 @@
 
 ## Classes e Objetos
 
-![bg1.png](bg1.png)
+<div align="center">
+  <img src="./bg1.png" width="50%">
+</div>
 
 ```Java
 Class Pessoa{
@@ -24,7 +26,10 @@ public static void main(String[] args) {
 ## Metodos 
 
 Função dentro da classe
-![imagem.jpg](imagem.jpg)
+
+<div align="center">
+  <img src="./imagem.jpg" width="50%">
+</div>
 
 ```java
 public class Pessoa {
@@ -45,12 +50,17 @@ public class Pessoa {
 ```
 
 #### Reescrita de Metodos (Overrid)
-![img_9.png](img_9.png)
 
-![img_12.png](img_12.png)
+<div align="center">
+  <img src="./img_9.png" width="60%">
+  <br><br>
+  <img src="./img_12.png" width="50%">
+</div>
 
 #### [Sobrecarga de Metodos (Overload)](https://www.devmedia.com.br/sobrecarga-e-sobreposicao-de-metodos-em-orientacao-a-objetos/33066)
-![img_10.png](img_10.png)
+<div align="center">
+  <img src="./img_10.png" width="70%">
+</div>
 
 ```java
 public class calculadora{
@@ -66,7 +76,9 @@ public class calculadora{
 ```
 
 #### Basicamente
-![img_11.png](img_11.png)
+<div align="center">
+  <img src="./img_11.png" width="">
+</div>
 
 ## Construtores
 
@@ -89,11 +101,171 @@ public class Pessoa {
 ```
 
 ## [Herança](https://porloca.wordpress.com/2011/06/28/ontem-hoje-e-sempre/) 
-![img_7.png](img_7.png)
-![img_6.png](img_6.png)
-![img_8.png](img_8.png)
 
-### Entrada de Dados
+<div align="center">
+  <img src="./img_7.png" width="60%">
+  <br><br>
+  <img src="./img_6.png" width="70%">
+  <br><br>
+  <img src="./img_8.png" width="70%">
+</div>
+
+## [Encapsulamento](https://www.linkedin.com/posts/augusto-galego_curso-completo-de-estruturas-de-dados-e-algoritmos-activity-7435670534727794689-vtNO?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEbPii8Byh5CC1NUr5cEQktGTf-VMxOgaag)
+A prática de esconder os detalhes de implementação de uma classe, e expor apenas uma interface pública para interagir com ela. Isso significa que os atributos de uma classe devem ser privados e o acesso a eles deve ser feito somente por meio de métodos públicos.
+
+```java
+public class Pessoa {
+    private String nome;
+    private int idade;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+}
+```
+<div align="center">
+  <img src="./img_13.png" width="">
+</div>
+
+### Modificadores de acesso
+
+- public
+- private: somente acessa esse valor na mesma class
+- protect: pode acessa o valor em outra class somente do mesmo pacote
+- default/nada: nao é visto fora do pacote dele
+
+<div align="center">
+  <img src="./img_2.png" width="70%">
+  <br><br>
+  <img src="./img_3.png" width="70%">
+</div>
+
+## [Array/ArrayList](https://www.dio.me/articles/funcoes-em-java-conhecendo-o-arraylist) 
+[Video](https://youtu.be/d59yoampHX0?si=sunl9wXbvU3dGIcL)
+
+Array: Lista de tamanhos definidos, precisa de uma variavel extra salvando o local de cada elemento da lista
+- mais simples, menos espaço, necessita do indice
+
+ArrayList: se encaixa melhor numa lista de tamanho indefinido
+
+```java
+import java.util.ArrayList;
+
+public class AgendaTelefonica {
+    public static void main(String[] args) {
+        
+        // uma lista "agenda" do tipo da class "Contato"
+        ArrayList<Contato> agenda = new ArrayList<>();
+    
+        for(Contato c : agenda) {
+            c.nome;
+        }
+    }
+}
+```
+<div align="center">
+  <img src="./java-array-vs-arraylist.jpg" width="90%">
+</div>
+
+## [Tratamento de Erros e Exceções](https://www.dio.me/articles/dominando-try-e-catch)
+```java
+public class ExemploTryCatch {
+
+    public static void main(String[] args) {
+        try {
+            int resultado = dividir(10, 0);
+            System.out.println("Resultado: " + resultado);
+        } catch (ArithmeticException e) {
+            System.err.println("Erro: Divisão por zero");
+        } finally {
+            // executa sempre, 
+            // mesmo que nenhuma excessão seja lancada ou 
+            // mesmo que o programa aborte !
+        }
+    }
+
+    public static int dividir(int numerador, int denominador) {
+        return numerador / denominador;
+    }
+}
+```
+
+## Conceitos
+
+### Poliforfismo
+O objeto pode assumir várias formas diferentes
+
+### Class Abstract
+Ser como uma classe base para todas as classes 
+que herdarem dela
+
+```java
+public abstract class Conta {
+    // Um intermediario entre as class
+    
+    protected String numero;
+    protected Pessoa titular;
+    protected double saldo;
+    protected Data criacao;
+    protected Gerente gerente;
+
+    /* Construtores podem permanecer. Inicializam
+       os atributos da classe e sao chamados
+       pelas subclasses. */
+
+    // Metodo abstrato:
+    // aqui ele não é implementado,
+    // mas nas subclasses ele será
+    public abstract double disponivel();
+
+    // Metodos concretos:
+    public boolean sacar(double valor) {
+        if (valor <= this.disponivel()) {
+            this.setSaldo(this.getSaldo() - valor);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    // Demais metodos...
+}
+```
+
+### Interface
+Entidade que defini um conjunto de 
+metodos que um conjunto de clases seram
+obrigadas a implementar
+- todos os metodos devem ser abstratos
+
+## [Coleções, Ordenação e Comparação](https://youtu.be/MWsJT6nbLz4?si=GVAcN8VU-_9QuXhO)
+Estrutura de dados que permiti armazenar 
+varios objetos 
+- Listas
+- Conjuntos
+- Mapas
+
+![img_16.png](img_16.png)
+
+![img_15.png](img_15.png)
+
+
+
+
+## Entrada de Dados
 ```java
 import java.util.Scanner; // 1. Importar a classe Scanner
 
@@ -114,19 +286,30 @@ public class EntradaDados {
 }
 ```
 
-## Encapsulamento
+## [Persistência em arquivos](https://youtu.be/cA-Z9y2J-6A?si=jvNTYi8ALwfZTFxd)
 
+<div align="center">
+  <img src="./img_14.png" width="90%">
+</div>
 
-## Array 
+```java
+public void salvarClientesArq() {
+    try {
+        FileWriter f = new FileWriter("clientes.txt");
+        BufferedWriter b = new BufferedWriter(f);
 
+        b.write(this.clientes.size() + "\n");
 
-## Metodos estaticos
+        for (Pessoa titular : this.clientes) {
+            // função onde vai salvar os 
+            // metodos do titular
+            titular.salvarArq(b);
+        }
 
-
-## Tratamento de Erros e Exceções
-
-
-## Poliforfismo
-
-
-## Coleções e Ordenação
+        b.close();
+    }
+    catch (IOException e) {
+        System.out.println("Erro ao salvar o arquivo");
+    }
+}
+```

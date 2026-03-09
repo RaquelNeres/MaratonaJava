@@ -3,7 +3,7 @@
 ## Metodos Java
 
 <div align="center">
-  <img src="./img.png" width="">
+  <img src="./img.png" width="90%">
   <br><br>
   <img src="./img_1.png" width="60%">
 </div>
