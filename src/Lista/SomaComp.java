@@ -9,7 +9,7 @@ package Lista;
 
 import java.util.Scanner;
 
-public class Soma {
+public class SomaComp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

@@ -6,10 +6,9 @@ package Lista;
 
 import java.util.Scanner;
 
-public class Mul {
+public class SomaMul {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int c = 0;
 
         System.out.println("Digite A: ");
         int a = scanner.nextInt();
@@ -17,12 +16,13 @@ public class Mul {
         System.out.println("Digite B: ");
         int b = scanner.nextInt();
 
+        int c = 0;
         if (a == b){
             c = (a + b);
         } else {
             c = (a * b);
         }
-        
+
         System.out.println(c);
 
         scanner.close();
