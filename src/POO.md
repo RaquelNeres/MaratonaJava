@@ -171,7 +171,7 @@ public class Pessoa {
 }
 ```
 <div align="center">
-  <img src="./img_13.png" width="">
+  <img src="./img_13.png" width="70%">
 </div>
 
 ### Modificadores de acesso
@@ -211,7 +211,7 @@ public class AgendaTelefonica {
 }
 ```
 <div align="center">
-  <img src="./java-array-vs-arraylist.jpg" width="90%">
+  <img src="./java-array-vs-arraylist.jpg" width="70%">
 </div>
 
 ## [Tratamento de Erros e Exceções](https://www.dio.me/articles/dominando-try-e-catch)
@@ -252,14 +252,20 @@ não podem ser instanciadas com new.
 enum DiasDaSemana {
     SEGUNDA("Ruim"), SEXTA("Melhor");
     private String descricao;
-    DiasDaSemana(String descricao) { this.descricao = descricao; }
-    public String getDescricao() { return descricao; }
+    
+    DiasDaSemana(String descricao) { 
+        this.descricao = descricao; 
+    }
+    
+    public String getDescricao() { 
+        return descricao; 
+    }
 }
 ```
 
-![img_17.png](./img_17.png)
-
-
+<div align="center">
+  <img src="./img_17.png" width="70%">
+</div>
 
 ## Conceitos
 
@@ -274,13 +280,20 @@ um tipo para outro, geralmente de uma superclasse
 para subclasse (downcasting). Usar instanceof 
 antes de um cast evita ClassCastException em tempo de execução.
 
-
+- Um objeto pode fazer referência a outro objeto para receber os elementos dele
 ```java
 // Exemplo de uso
 Object obj = "Olá Mundo";
 if (obj instanceof String) { // Verificação
     String s = (String) obj; // Cast seguro
     System.out.println(s.length());
+}
+```
+
+```java
+// se o produto for uma instancia de "Tomate", executa
+if (produto instanceof Tomate) {
+    Tomate tomate = (Tomate) produto    
 }
 ```
 
@@ -323,10 +336,30 @@ public abstract class Conta {
 ```
 
 ### Interface
-Entidade que defini um conjunto de 
-metodos que um conjunto de clases seram
+Entidade que defini um conjunto de métodos que um conjunto de classes seram
 obrigadas a implementar
 - todos os metodos devem ser abstratos
+````java
+// Definindo a interface (contrato)
+interface Animal {
+    void emitirSom(); // Método abstrato (sem corpo)
+}
+
+// Classe implementando a interface
+class Cachorro implements Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O cachorro faz: Au Au");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Cachorro meuCao = new Cachorro();
+        meuCao.emitirSom(); // Saída: O cachorro faz: Au Au
+    }
+}   
+````
 
 ## [Coleções, Ordenação e Comparação](https://youtu.be/MWsJT6nbLz4?si=GVAcN8VU-_9QuXhO)
 Estrutura de dados que permiti armazenar 
@@ -335,12 +368,11 @@ varios objetos
 - Conjuntos
 - Mapas
 
-![img_16.png](./img_16.png)
-
-![img_15.png](./img_15.png)
-
-
-
+<div align="center">
+  <img src="./img_16.png" width="70%">
+  <br><br>
+  <img src="./img_15.png" width="70%">
+</div>
 
 ## Entrada de Dados
 ```java
@@ -366,7 +398,7 @@ public class EntradaDados {
 ## [Persistência em arquivos](https://youtu.be/cA-Z9y2J-6A?si=jvNTYi8ALwfZTFxd)
 
 <div align="center">
-  <img src="./img_14.png" width="90%">
+  <img src="./img_14.png" width="70%">
 </div>
 
 ```java
