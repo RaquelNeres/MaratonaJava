@@ -8,7 +8,7 @@ public class diMenor {
 
         System.out.println("Digite o nome e idade do individuo ");
 
-        String nome = sc.nextLine();
+        String nome = sc.next();
         int idade = sc.nextInt();
 
         Pessoa p1 = new Pessoa(nome, idade);
