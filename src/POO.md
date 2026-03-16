@@ -84,7 +84,10 @@ public class Pessoa {
 }
 ```
 
-#### Reescrita de Metodos (Overrid)
+### [Poliformismo](https://www.devmedia.com.br/uso-de-polimorfismo-em-java/26140)
+O objeto pode assumir várias formas diferentes
+
+##### Reescrita de Metodos (Overrid)
 
 <div align="center">
   <img src="./img_9.png" width="60%">
@@ -92,7 +95,7 @@ public class Pessoa {
   <img src="./img_12.png" width="50%">
 </div>
 
-#### [Sobrecarga de Metodos (Overload)](https://www.devmedia.com.br/sobrecarga-e-sobreposicao-de-metodos-em-orientacao-a-objetos/33066)
+##### [Sobrecarga de Metodos (Overload)](https://www.devmedia.com.br/sobrecarga-e-sobreposicao-de-metodos-em-orientacao-a-objetos/33066)
 <div align="center">
   <img src="./img_10.png" width="70%">
 </div>
@@ -268,9 +271,6 @@ enum DiasDaSemana {
 </div>
 
 ## Conceitos
-
-### Poliforfismo
-O objeto pode assumir várias formas diferentes
 
 ###### Cast e instaceof
 instanceof verifica se um objeto é de um determinado 
