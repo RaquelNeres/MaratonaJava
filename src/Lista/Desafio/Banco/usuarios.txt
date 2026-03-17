@@ -1,0 +1,11 @@
+// Formato: numeroCadastro;nome;cpf;email;telefone;livrosEmprestados
+// livrosEmprestados: ISBN separados por | (vazio se nenhum)
+
+U001;Carlos Eduardo Santos;123.456.789-00;carlos.edu@email.com;(27)99801-1234;978-8532530785
+U002;Mariana Oliveira;234.567.890-11;mari.oliveira@email.com;(27)99802-5678;
+U003;Felipe Rocha;345.678.901-22;felipe.rocha@email.com;(27)99803-9012;978-8501052094
+U004;Ana Beatriz Lima;456.789.012-33;ana.lima@email.com;(27)99804-3456;
+U005;João Pedro Nunes;567.890.123-44;joao.nunes@email.com;(27)99805-7890;
+U006;Larissa Mendes;678.901.234-55;larissa.m@email.com;(27)99806-2345;
+U007;Rafael Costa;789.012.345-66;rafael.costa@email.com;(27)99807-6789;
+U008;Camila Ferreira;890.123.456-77;camila.f@email.com;(27)99808-0123;

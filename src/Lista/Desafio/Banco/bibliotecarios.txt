@@ -1,0 +1,9 @@
+// Formato: matricula;nome;cpf;email;turno;cargo
+// Turno: MANHA | TARDE | NOITE
+// Cargo: ATENDENTE | SUPERVISOR | GERENTE
+
+B001;Fernanda Alves;111.222.333-44;fernanda.alves@biblioteca.com;MANHA;GERENTE
+B002;Marcos Souza;222.333.444-55;marcos.souza@biblioteca.com;TARDE;SUPERVISOR
+B003;Patrícia Gomes;333.444.555-66;patricia.gomes@biblioteca.com;MANHA;ATENDENTE
+B004;Lucas Barbosa;444.555.666-77;lucas.barbosa@biblioteca.com;TARDE;ATENDENTE
+B005;Juliana Carvalho;555.666.777-88;juliana.carvalho@biblioteca.com;NOITE;ATENDENTE

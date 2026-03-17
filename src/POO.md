@@ -3,7 +3,7 @@
 ## Classes e Objetos
 
 <div align="center">
-  <img src="./bg1.png" width="50%">
+  <img src="./imgs/bg1.png" width="50%">
 </div>
 
 ```Java
@@ -28,7 +28,7 @@ public static void main(String[] args) {
 Função dentro da classe 
 
 <div align="center">
-  <img src="./imagem.jpg" width="50%">
+  <img src="./imgs/imagem.jpg" width="50%">
 </div>
 
 ```java
@@ -90,14 +90,14 @@ O objeto pode assumir várias formas diferentes
 ##### Reescrita de Metodos (Overrid)
 
 <div align="center">
-  <img src="./img_9.png" width="60%">
+  <img src="./imgs/img_9.png" width="60%">
   <br><br>
-  <img src="./img_12.png" width="50%">
+  <img src="./imgs/img_12.png" width="50%">
 </div>
 
 ##### [Sobrecarga de Metodos (Overload)](https://www.devmedia.com.br/sobrecarga-e-sobreposicao-de-metodos-em-orientacao-a-objetos/33066)
 <div align="center">
-  <img src="./img_10.png" width="70%">
+  <img src="./imgs/img_10.png" width="70%">
 </div>
 
 ```java
@@ -115,7 +115,7 @@ public class calculadora{
 
 #### Basicamente
 <div align="center">
-  <img src="./img_11.png" width="">
+  <img src="./imgs/img_11.png" width="">
 </div>
 
 ## Construtores
@@ -141,11 +141,11 @@ public class Pessoa {
 ## [Herança](https://porloca.wordpress.com/2011/06/28/ontem-hoje-e-sempre/) 
 
 <div align="center">
-  <img src="./img_7.png" width="60%">
+  <img src="./imgs/img_7.png" width="60%">
   <br><br>
-  <img src="./img_6.png" width="70%">
+  <img src="./imgs/img_6.png" width="70%">
   <br><br>
-  <img src="./img_8.png" width="70%">
+  <img src="./imgs/img_8.png" width="70%">
 </div>
 
 ## [Encapsulamento](https://www.linkedin.com/posts/augusto-galego_curso-completo-de-estruturas-de-dados-e-algoritmos-activity-7435670534727794689-vtNO?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEbPii8Byh5CC1NUr5cEQktGTf-VMxOgaag)
@@ -174,7 +174,7 @@ public class Pessoa {
 }
 ```
 <div align="center">
-  <img src="./img_13.png" width="70%">
+  <img src="./imgs/img_13.png" width="70%">
 </div>
 
 ### Modificadores de acesso
@@ -185,9 +185,9 @@ public class Pessoa {
 - default/nada: nao é visto fora do pacote dele
 
 <div align="center">
-  <img src="./img_2.png" width="70%">
+  <img src="./imgs/img_2.png" width="70%">
   <br><br>
-  <img src="./img_3.png" width="70%">
+  <img src="./imgs/img_3.png" width="70%">
 </div>
 
 ## [Array/ArrayList](https://www.dio.me/articles/funcoes-em-java-conhecendo-o-arraylist) 
@@ -214,7 +214,7 @@ public class AgendaTelefonica {
 }
 ```
 <div align="center">
-  <img src="./java-array-vs-arraylist.jpg" width="70%">
+  <img src="./imgs/java-array-vs-arraylist.jpg" width="70%">
 </div>
 
 ## [Tratamento de Erros e Exceções](https://www.dio.me/articles/dominando-try-e-catch)
@@ -267,7 +267,7 @@ enum DiasDaSemana {
 ```
 
 <div align="center">
-  <img src="./img_17.png" width="70%">
+  <img src="./imgs/img_17.png" width="70%">
 </div>
 
 ## Conceitos
@@ -369,9 +369,9 @@ varios objetos
 - Mapas
 
 <div align="center">
-  <img src="./img_16.png" width="70%">
+  <img src="./imgs/img_16.png" width="70%">
   <br><br>
-  <img src="./img_15.png" width="70%">
+  <img src="./imgs/img_15.png" width="70%">
 </div>
 
 ## Entrada de Dados
@@ -397,8 +397,10 @@ public class EntradaDados {
 
 ## [Persistência em arquivos](https://youtu.be/cA-Z9y2J-6A?si=jvNTYi8ALwfZTFxd)
 
+[Leitura de arquivos](https://www.dio.me/articles/lendo-conteudo-de-arquivo-txt-com-java)
+
 <div align="center">
-  <img src="./img_14.png" width="70%">
+  <img src="./imgs/img_14.png" width="70%">
 </div>
 
 ```java

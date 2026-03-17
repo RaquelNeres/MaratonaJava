@@ -1,0 +1,13 @@
+// Formato: titulo;autor;isbn;anoPub;genero;status
+// Status: DISPONIVEL | EMPRESTADO | RESERVADO
+
+O Senhor dos Anéis;J.R.R. Tolkien;978-8533613379;1954;Fantasia;DISPONIVEL
+Harry Potter e a Pedra Filosofal;J.K. Rowling;978-8532530785;1997;Fantasia;EMPRESTADO
+Clean Code;Robert C. Martin;978-8576082675;2008;Tecnologia;DISPONIVEL
+O Hobbit;J.R.R. Tolkien;978-8595084742;1937;Fantasia;DISPONIVEL
+Dom Casmurro;Machado de Assis;978-8572328197;1899;Romance;DISPONIVEL
+1984;George Orwell;978-8535914849;1949;Distopia;RESERVADO
+A Arte da Guerra;Sun Tzu;978-8577191369;500AC;Filosofia;DISPONIVEL
+Código Limpo;Robert C. Martin;978-8576082675;2008;Tecnologia;DISPONIVEL
+O Alquimista;Paulo Coelho;978-8501052094;1988;Ficção;EMPRESTADO
+Sapiens;Yuval Noah Harari;978-8535928099;2011;Historia;DISPONIVEL
