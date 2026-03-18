@@ -3,19 +3,29 @@ package Lista.Desafio;
 public class Livro implements Emprestavel {
     private String titulo;
     private String autor;
+    private String isbn;
+    private String anoPub;
+    private String genero;
     private StatusLivro status;
 
-    public Livro(String titulo, String autor) {
+
+    public Livro(String titulo, String autor, String isbn, String anoPub, String genero, String statu) {
         this.titulo = titulo;
         this.autor = autor;
+        this.isbn = isbn;
+        this.anoPub = anoPub;
+        this.genero = genero;
         this.status = StatusLivro.DISPONIVEL;
+        if ("EMPRESTADO".equalsIgnoreCase(statu)) {
+            this.status = StatusLivro.EMPRESTADO;
+        }
     }
 
     @Override
     public void emprestar(Usuario usuario) {
         if (status == StatusLivro.DISPONIVEL) {
             this.status = StatusLivro.EMPRESTADO;
-            System.out.println(titulo + " emprestado para " + usuario.getNumCadastro());
+            System.out.println(titulo + " emprestado para " + usuario.getNome());
         } else {
             System.out.println("Livro indisponível!");
         }
