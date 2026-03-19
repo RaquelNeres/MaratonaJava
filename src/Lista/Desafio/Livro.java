@@ -8,7 +8,6 @@ public class Livro implements Emprestavel {
     private String genero;
     private StatusLivro status;
 
-
     public Livro(String titulo, String autor, String isbn, String anoPub, String genero, String statu) {
         this.titulo = titulo;
         this.autor = autor;
@@ -19,6 +18,10 @@ public class Livro implements Emprestavel {
         if ("EMPRESTADO".equalsIgnoreCase(statu)) {
             this.status = StatusLivro.EMPRESTADO;
         }
+    }
+
+    public void check(){
+        System.out.println("O Livro '" + titulo + "' esta: " + status);
     }
 
     @Override

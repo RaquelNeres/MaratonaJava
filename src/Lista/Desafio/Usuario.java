@@ -2,23 +2,18 @@ package Lista.Desafio;
 
 public class Usuario extends AbsPessoa {
     private String numCadastro;
-    private String nome;
-    private String cpf;
-    private String email;
     private String cel;
+    private String emprestimos;
 
-    public Usuario(String numCadastro, String nome, String cpf, String email, String cel, String dado, String s) {
+    public Usuario(String numCadastro, String nome, String cpf, String email, String cel, String s) {
         super(nome, cpf, email);
         this.numCadastro = numCadastro;
         this.cel = cel;
-    }
-
-    public String getNome() {
-        return nome;
+        this.emprestimos = s;
     }
 
     @Override
     public void exibirInfo() {
-        System.out.println("Usuário: " + nome);
+        System.out.println("Usuário: " + super.getNome());
     }
 }

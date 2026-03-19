@@ -11,6 +11,10 @@ public abstract class AbsPessoa {
         this.email = email;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public abstract void exibirInfo();
 
 }

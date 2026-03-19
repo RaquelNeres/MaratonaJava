@@ -1,71 +1,70 @@
 package Lista.Desafio;
 
 import java.io.*;
-import java.util.Scanner;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class OpenBancos {
-    protected static void usuarios(){
-        try {
-            File f = new File("./src/Lista/Desafio/Banco/usuarios.txt");
-            Scanner scanner = new Scanner(f);
+    protected static List<Usuario> usuarios() {
+        var path = Path.of("./src/Lista/Desafio/Banco/usuarios.txt");
 
-            while (scanner.hasNextLine()) {
-                String linha = scanner.nextLine();
-                String[] dados = linha.split("; ");
+        try (Stream<String> lines = Files.lines(path)) {
+            return lines.skip(1)
+                    .map(linha -> linha.split(";"))
+                    .filter(dados -> dados.length >= 5)
+                    .map(d -> {
+                        String livros = (d.length > 5) ? d[5] : "Nenhum";
 
-                if (dados.length >= 6){
-                    Usuario usuario = new Usuario(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5], dados[6]);
-                    usuario.exibirInfo();
-                }
-            }
-            scanner.close();
+                        return new Usuario(d[0], d[1], d[2], d[3], d[4], livros);
+                    })
+                    .toList();
 
-        } catch (FileNotFoundException e) {
-            System.out.println("Arquivo não encontrado: " + e.getMessage());
-            throw new RuntimeException(e);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
         }
     }
 
-    protected static void livros(){
-        try {
-            File f = new File("./src/Lista/Desafio/Banco/livros.txt");
-            Scanner scanner = new Scanner(f);
+    protected static List<Livro> livros(){
+        var path = Path.of("./src/Lista/Desafio/Banco/livros.txt");
 
-            while (scanner.hasNextLine()) {
-                String linha = scanner.nextLine();
-                String[] dados = linha.split("; ");
+        // declara a variavel e recebe/mapeia o anterior
+        try (Stream<String> lines = Files.lines(path)) {
+            return lines.skip(1)
+                .map(linha -> linha.split(";"))
+                    .filter(dados -> dados.length >= 6)
+                    .map(d -> {
+                        return new Livro(d[0], d[1], d[2], d[3], d[4], d[5]);
+                    })
+                    .toList();
 
-                if (dados.length >= 6){
-                    Livro livro = new Livro(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5]);
-                }
-            }
-            scanner.close();
-
-        } catch (FileNotFoundException e) {
-            System.out.println("Arquivo não encontrado: " + e.getMessage());
-            throw new RuntimeException(e);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
         }
     }
 
-    protected static void bibliotecarios(){
-        try {
-            File f = new File("./src/Lista/Desafio/Banco/bibliotecarios.txt");
-            Scanner scanner = new Scanner(f);
+    protected static List<Bibliotecario> bibliotecarios(){
+        var path = Path.of("./src/Lista/Desafio/Banco/bibliotecarios.txt");
 
-            while (scanner.hasNextLine()) {
-                String linha = scanner.nextLine();
-                String[] dados = linha.split("; ");
-
-                if (dados.length >= 6){
-                    Bibliotecario bibliotecario = new Bibliotecario(dados[0], dados[1], dados[2], dados[3], dados[4], dados[5]);
-                    bibliotecario.exibirInfo();
-                }
-            }
-            scanner.close();
+        try (Stream<String> lines = Files.lines(path)) {
+            return lines.skip(1)
+                    .map(linha -> linha.split(";"))
+                    .filter(dados -> dados.length >= 6)
+                    .map(d -> {
+                        return new Bibliotecario(d[0], d[1], d[2], d[3], d[4], d[5]);
+                    })
+                    .toList();
 
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo não encontrado: " + e.getMessage());
             throw new RuntimeException(e);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
         }
     }
 
