@@ -20,6 +20,10 @@ public class Livro implements Emprestavel {
         }
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
     public void check(){
         System.out.println("O Livro '" + titulo + "' esta: " + status);
     }

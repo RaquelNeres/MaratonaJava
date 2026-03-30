@@ -12,6 +12,7 @@ public class Usuario extends AbsPessoa {
         this.emprestimos = s;
     }
 
+
     @Override
     public void exibirInfo() {
         System.out.println("Usuário: " + super.getNome());

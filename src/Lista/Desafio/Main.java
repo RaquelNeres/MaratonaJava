@@ -25,9 +25,22 @@ public class Main {
 
         switch (acao) {
             case 1:
-                System.out.println();
+                System.out.println("Preguiça");
                 break;
             case 2:
+                System.out.println("Digite o nome do livro: ");
+                String busca = sc.next();
+                sc.nextLine();
+
+                System.out.println(">> Livros encontrados: ");
+                for (Livro livro : listaLivros) {
+                    String titulo = livro.getTitulo();
+
+                    if (titulo.toLowerCase().contains(busca.toLowerCase())) {
+                        System.out.println(titulo);
+                    }
+                }
+
                 break;
             case 3:
                 if (listaLivros.isEmpty()) {
@@ -41,8 +54,65 @@ public class Main {
                 }
                 break;
             case 4:
+                System.out.println("Digite o nome do livro que voce quer ler: ");
+                String buscaL = sc.next();
+                sc.nextLine();
+
+                System.out.println(">> Livros encontrados: ");
+                for (Livro livro : listaLivros) {
+                    String titulo = livro.getTitulo();
+
+                    if (titulo.toLowerCase().contains(buscaL.toLowerCase())) {
+                        System.out.println(titulo);
+                        System.out.println("Quer ler esse livro ? True or False");
+                        boolean resposta = sc.nextBoolean();
+
+                        if (resposta){
+                            System.out.println("Quem é você? ");
+                            String nome = sc.next();
+
+                            for (Usuario usuario : listaUsuarios){
+                                String n = usuario.getNome();
+
+                                if (n.toLowerCase().contains(nome.toLowerCase())){
+                                    livro.emprestar(usuario);
+
+                                }
+                            }
+                        }
+                    }
+                }
+
                 break;
             case 5:
+                System.out.println("Digite o livro que voce quer devolver: ");
+                String livr = sc.next();
+
+                System.out.println(">> Livros encontrados: ");
+                for (Livro livro : listaLivros) {
+                    String titulo = livro.getTitulo();
+
+                    if (titulo.toLowerCase().contains(livr.toLowerCase())) {
+                        System.out.println(titulo);
+                        System.out.println("Quer devolver esse livro ? True or False");
+                        boolean resposta = sc.nextBoolean();
+
+                        if (resposta){
+                            System.out.println("Quem é você? ");
+                            String nome = sc.next();
+
+                            for (Usuario usuario : listaUsuarios){
+                                String n = usuario.getNome();
+
+                                if (n.toLowerCase().contains(nome.toLowerCase())){
+                                    livro.devolver();
+
+                                }
+                            }
+                        }
+                    }
+                }
+
                 break;
             default:  // (nenhuma das opções)
                 System.out.println("Nenhuma das opções foi selecionadas");
